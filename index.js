@@ -9,6 +9,7 @@ app.route('/reverse').get((req, res) => {
     for (var i = str.length - 1; i >= 0; i--) {
         newStr += str[i];
     }
+    console.log(`reverse ${str} become ${newStr}`);
     res.send({
         result: newStr
     });

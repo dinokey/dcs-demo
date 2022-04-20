@@ -4,6 +4,7 @@ const app = express();
 app.route('/').get((req, res) => res.send('Hello! DCS Demo Here!'));
 
 /*
+* reverse incoming string from user
 * str    : computer
 * result : retupmoc
 */

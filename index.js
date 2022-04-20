@@ -3,13 +3,17 @@ const app = express();
 
 app.route('/').get((req, res) => res.send('Hello! DCS Demo Here!'));
 
+/*
+* str    : computer
+* result : retupmoc
+*/
 app.route('/reverse').get((req, res) => {
     let str = req.query.str;
     let newStr = "";
     for (var i = str.length - 1; i >= 0; i--) {
         newStr += str[i];
     }
-    console.log(`reverse ${str} become ${newStr}`);
+    console.log(`reverse '${str}' become '${newStr}'`);
     res.send({
         result: newStr
     });

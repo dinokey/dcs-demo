@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 app.route('/').get((req, res) => res.send('Hello! DCS Demo Here!'));
 
@@ -18,6 +19,10 @@ app.route('/reverse').get((req, res) => {
     res.send({
         result: newStr
     });
+});
+
+app.route('/page').get((req, res) => {
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 
